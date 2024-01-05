@@ -8,11 +8,13 @@ export default function ViewMember() {
         firstName: "",
         middleName: "",
         lastName: "",
+        age: "",
         dateOfBirth: "",
         sex: "",
         address: "",
         mobileNumber: "",
-        beneficiary: ""
+        membershipType: ""
+  
     });
 
     const {id}=useParams();
@@ -49,6 +51,10 @@ export default function ViewMember() {
                                     {member.lastName}
                                 </li>
                                 <li className="list-group-item">
+                                    <b>Age:</b>
+                                    {member.age}
+                                </li>
+                                <li className="list-group-item">
                                     <b>SEX:</b>
                                     {member.sex}
                                 </li>
@@ -57,22 +63,22 @@ export default function ViewMember() {
                                     {member.dateOfBirth}
                                 </li>
                                 <li className="list-group-item">
-                                    <b>ADDRESS:</b>
-                                    {member.address}
-                                </li>
-                                <li className="list-group-item">
                                     <b>MOBILE NUMBER:</b>
                                     {member.mobileNumber}
                                 </li>
                                 <li className="list-group-item">
-                                    <b>BENEFICIARY:</b>
-                                    {member.beneficiary}
+                                    <b>ADDRESS:</b>
+                                    {member.address}
+                                </li>
+                                <li className="list-group-item">
+                                    <b>Membership Type:</b>
+                                    {member.membershipType}
                                 </li>
                                 
                             </ul>
                         </div>
                     </div>
-                    <Link className="btn btn-primary my-2" to={"/"}>Back to Home</Link>
+                    <Link className="btn btn-primary my-2" to={"/home"}>Back to Home</Link>
                 </div>
             </div>
         </div>

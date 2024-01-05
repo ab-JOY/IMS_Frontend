@@ -13,14 +13,15 @@ export default function EditMember() {
         firstName: "",
         middleName: "",
         lastName: "",
+        age: "",
         dateOfBirth: "",
         sex: "",
         address: "",
         mobileNumber: "",
-        beneficiary: ""
+        membershipType: ""
     });
 
-    const { firstName, middleName, lastName, dateOfBirth, sex, address, mobileNumber, beneficiary } = member;
+    const { firstName, middleName, lastName, age, dateOfBirth, sex, address, mobileNumber, membershipType} = member;
 
     const onInputChange = (e) => {
         setMember({ ...member, [e.target.name]: e.target.value })
@@ -34,7 +35,7 @@ export default function EditMember() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.put(`http://localhost:8080/member/${id}`, member);
-        navigate("/");
+        navigate("/home");
     };
 
     const loadMembers = async ()=>{
@@ -90,6 +91,19 @@ export default function EditMember() {
                                 onChange={(e) => onInputChange(e)}
                             />
                         </div>
+                        <div className="mb-3">
+                            <label htmlFor="Age" className="form-label">
+                                Age
+                            </label>
+                            <input
+                                type={"text"}
+                                className="form-control"
+                                placeholder="Age"
+                                name="age"
+                                value={age}
+                                onChange={(e) => onInputChange(e)}
+                            />
+                        </div>
 
                         <div className="mb-3">
                             <label htmlFor="Date of Birth" className="form-label">
@@ -98,7 +112,7 @@ export default function EditMember() {
                             <input
                                 type={"text"}
                                 className="form-control"
-                                placeholder="Date of Birth"
+                                placeholder="MM-DD-YY"
                                 name="dateOfBirth"
                                 value={dateOfBirth}
                                 onChange={(e) => onInputChange(e)}
@@ -120,20 +134,6 @@ export default function EditMember() {
                         </div>
 
                         <div className="mb-3">
-                            <label htmlFor="Address" className="form-label">
-                                Address
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Address"
-                                name="address"
-                                value={address}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
                             <label htmlFor="Mobile Number" className="form-label">
                                 Mobile Number
                             </label>
@@ -148,22 +148,47 @@ export default function EditMember() {
                         </div>
 
                         <div className="mb-3">
-                            <label htmlFor="Beneficiary" className="form-label">
-                                Beneficiary
+                            <label htmlFor="Address" className="form-label">
+                                Address
                             </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Beneficiary"
-                                name="beneficiary"
-                                value={beneficiary}
+                            <select
+                                className="form-select"
+                                aria-label="Address"
+                                name="address"
+                                value={address}
                                 onChange={(e) => onInputChange(e)}
-                            />
+                            >
+                                <option value="" disabled>Select an address</option>
+                                <option value="Casabaan">Casabaan</option>
+                                <option value="Longos">Longos</option>
+                                <option value="Tondo">Tondo</option>
+                                <option value="Laoag">Laoag</option>
+                                <option value="Lomboy">Lomboy</option>
+                            </select>
                         </div>
+
+
+                        <div className="mb-3">
+                            <label htmlFor="Membership Type" className="form-label">
+                                Membership Type
+                            </label>
+                            <select
+                                className="form-select"
+                                placeholder="Membership Type"
+                                name="membershipType"
+                                value={membershipType}
+                                onChange={(e) => onInputChange(e)}
+                            >
+                                <option value="" disabled>Select type of Membership</option>
+                                <option value="Member">Member</option>
+                                <option value="Officer">Officer</option>
+                            </select>
+                        </div>
+
                         <button type="submit" className="btn btn-outline-primary">
                             Submit
                         </button>
-                        <Link className="btn btn-outline-danger mx-2" to="/">
+                        <Link className="btn btn-outline-danger mx-2" to="/home">
                             Cancel
                         </Link>
                     </form>

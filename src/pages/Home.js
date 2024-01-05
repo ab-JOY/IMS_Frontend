@@ -75,6 +75,12 @@ export default function Home() {
 
                     </tbody>
                 </table>
+
+                <div>
+                    <Link className="btn btn-outline-danger mx-2 mt-2" to="/admin">
+                            Back to Dashboard
+                        </Link>
+                </div>
             </div>
         </div>
     )
