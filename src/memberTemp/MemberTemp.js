@@ -24,9 +24,9 @@ export default function Home() {
     const triggerDataTransfer = async () => {
         try {
             await axios.post(`http://localhost:8080/member`);
-            console.log('Data transfer initiated successfully');
+            alert('Data transfer initiated successfully');
         } catch (error) {
-            console.error('Error initiating data transfer:', error);
+            alert('Error initiating data transfer:', error);
         }
     };
 
@@ -64,6 +64,10 @@ export default function Home() {
                                    <td>{memberTemp.mobileNumber_temp}</td>
                                     <td>{memberTemp.membershipType_temp}</td>
                                     <td>
+                                        <Link className="btn btn-outline-primary mx-2 mt-2"
+                                            to={`/editmembertemp/${memberTemp.id_temp}`}>
+                                            Edit
+                                        </Link>
                                         <button className="btn btn-danger mx-2 mt-2"
                                             onClick={() => deleteMemberTemp(memberTemp.id_temp)}>
                                             Delete

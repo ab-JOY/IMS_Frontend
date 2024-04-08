@@ -12,6 +12,10 @@ import MemberTemp from './memberTemp/MemberTemp';
 import AboutUs from './pages/AboutUs';
 import Programs from './pages/Programs';
 import AddMember from './member/AddMember';
+import OfficersDirectory from './pages/OfficersDirectory';
+import Report from './member/Report';
+import Login from './pages/Login';
+
 
 
 function App() {
@@ -22,15 +26,19 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Main/>}/>
-        <Route exact path="/admin" element={<AdminDashboard/>}/>
+        <Route exact path ="/admin" element={<AdminDashboard/>}/>
         <Route exact path="/home" element={<Home/>}/>
         <Route exact path="/addmember" element={<AddMember/>}/>
         <Route exact path="/editmember/:id" element={<EditMember/>}/>
+        <Route exact path="/editmembertemp/:id_temp" element={<EditMember/>}/>
         <Route exact path="/viewmember/:id" element={<ViewMember/>}/>
         <Route exact path="/register" element={<AddMemberTemp/>}/>
         <Route exact path="/pending" element={<MemberTemp/>}/>
+        <Route exact path="/newadmin" element={<Report/>}/>
         <Route exact path="/about" element={<AboutUs/>}/>
         <Route exact path="/programs" element={<Programs/>}/>
+        <Route exact path="/officers" element={<OfficersDirectory/>}/>
+        <Route exact path="/login" element={<Login/>}/>
        
       </Routes>
 

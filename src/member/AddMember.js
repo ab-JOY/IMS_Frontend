@@ -33,155 +33,146 @@ export default function AddMember() {
     }
 
     return (
-        <div className="container">
-            <div className="form">
-                <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-                    <h2 className="text-center m-4">Register New Member</h2>
-                    <form onSubmit={(e) => onSubmit(e)}>
-                        <div className="mb-3">
-                            <label htmlFor="First Name" className="form-label">
-                                First Name
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="First Name"
-                                name="firstName_temp"
-                                value={firstName_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Middle Name" className="form-label">
-                                Middle Name
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Middle Name"
-                                name="middleName_temp"
-                                value={middleName_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Last Name" className="form-label">
-                                Last Name
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Last Name"
-                                name="lastName_temp"
-                                value={lastName_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Age" className="form-label">
-                                Age
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Age"
-                                name="age_temp"
-                                value={age_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Date of Birth" className="form-label">
-                                Date of Birth
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="MM-DD-YY"
-                                name="dateOfBirth_temp"
-                                value={dateOfBirth_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Sex" className="form-label">
-                                Sex
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Sex"
-                                name="sex_temp"
-                                value={sex_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Mobile Number" className="form-label">
-                                Mobile Number
-                            </label>
-                            <input
-                                type={"text"}
-                                className="form-control"
-                                placeholder="Mobile Number"
-                                name="mobileNumber_temp"
-                                value={mobileNumber_temp}
-                                onChange={(e) => onInputChange(e)}
-                            />
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Address" className="form-label">
-                                Address
-                            </label>
-                            <select
-                                className="form-select"
-                                aria-label="Address"
-                                name="address_temp"
-                                value={address_temp}
-                                onChange={(e) => onInputChange(e)}
-                            >
-                                <option value="" disabled>Select an address</option>
-                                <option value="Casabaan">Casabaan</option>
-                                <option value="Longos">Longos</option>
-                                <option value="Tondo">Tondo</option>
-                                <option value="Laoag">Laoag</option>
-                                <option value="Lomboy">Lomboy</option>
-                            </select>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="Membership Type" className="form-label">
-                                Membership Type
-                            </label>
-                            <select
-                                className="form-select"
-                                placeholder="Membership Type"
-                                name="membershipType_temp"
-                                value={membershipType_temp}
-                                onChange={(e) => onInputChange(e)}
-                            >
-                                <option value="" disabled>Select type of Membership</option>
-                                <option value="Member">Member</option>
-                                <option value="Officer">Officer</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" className="btn btn-outline-primary">
-                            Submit
-                        </button>
-                        <Link className="btn btn-outline-danger mx-2" to="/admin">
-                            Cancel
-                        </Link>
-                    </form>
-                </div>
-            </div>
+        <div className="form-container">
+      <h2 className="text-center m-4">Register</h2>
+      <form className="form" onSubmit={(e) => onSubmit(e)}>
+        <div className="mb-3">
+          <label htmlFor="firstName_temp">First Name</label>
+          <input
+            type="text"
+            className="form-input"
+            id="firstName_temp"
+            placeholder="First Name"
+            name="firstName_temp"
+            required
+            value={firstName_temp}
+            onChange={(e) => onInputChange(e)}
+          />
         </div>
+        <div className="mb-3">
+          <label htmlFor="middleName_temp">Middle Name</label>
+          <input
+            type="text"
+            className="form-input"
+            id="middleName_temp"
+            placeholder="Middle Name"
+            name="middleName_temp"
+            value={middleName_temp}
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="lastName_temp">Last Name</label>
+          <input
+            type="text"
+            required
+            className="form-input"
+            id="lastName_temp"
+            placeholder="Last Name"
+            name="lastName_temp"
+            value={lastName_temp}
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="age_temp">Age</label>
+          <input
+            type="text"
+            required
+            className="form-input"
+            id="age_temp"
+            placeholder="Age"
+            name="age_temp"
+            value={age_temp}
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="dateOfBirth_temp">Date of Birth</label>
+          <input
+            type="date"
+            required
+            className="form-input"
+            id="dateOfBirth_temp"
+            placeholder="MM-DD-YY"
+            name="dateOfBirth_temp"
+            value={dateOfBirth_temp}
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="sex_temp">Sex</label>
+          <input
+            type="text"
+            required
+            className="form-input"
+            id="sex_temp"
+            placeholder="Sex"
+            name="sex_temp"
+            value={sex_temp}
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="mobileNumber_temp">Mobile Number</label>
+          <input
+            type="text"
+            required
+            className="form-input"
+            id="mobileNumber_temp"
+            placeholder="Mobile Number"
+            name="mobileNumber_temp"
+            value={mobileNumber_temp}
+            onChange={(e) => onInputChange(e)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="address_temp">Address</label>
+          <select
+            className="form-input select"
+            required
+            aria-label="Address"
+            id="address_temp"
+            name="address_temp"
+            value={address_temp}
+            onChange={(e) => onInputChange(e)}
+          >
+            <option value="" disabled>
+              Select an address
+            </option>
+            <option value="Casabaan">Casabaan</option>
+            <option value="Longos">Longos</option>
+            <option value="Tondo">Tondo</option>
+            <option value="Laoag">Laoag</option>
+            <option value="Lomboy">Lomboy</option>
+          </select>
+        </div>
+        <div className="mb-3 get-all-col">
+          <label htmlFor="membershipType_temp">Membership Type</label>
+          <select
+            className="form-input select"
+            required
+            id="membershipType_temp"
+            name="membershipType_temp"
+            value={membershipType_temp}
+            onChange={(e) => onInputChange(e)}
+          >
+            <option value="" disabled>
+              Select type of Membership
+            </option>
+            <option value="Member">Member</option>
+            <option value="Officer">Officer</option>
+          </select>
+        </div>
+        <div className="duo-button text-center get-all-col">
+          <button type="submit" className="submit">
+            Submit
+          </button>
+          <Link className="cancel-btn" to="/admin">
+            <button className="cancel">Cancel</button>
+          </Link>
+        </div>
+      </form>
+      </div>
     )
 }

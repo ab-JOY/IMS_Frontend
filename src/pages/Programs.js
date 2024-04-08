@@ -11,11 +11,8 @@ export default function Programs() {
                             <Card.Title>TESDA HOUSEKEEPING NCII</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Fully-Funded</Card.Subtitle>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                For more details please contact the officer in-charge in your respective barangays.
                             </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                     </Card>
                 </div>
@@ -26,11 +23,8 @@ export default function Programs() {
                             <Card.Title>NATIVE KAMBING DISTRIBUTION</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Random Draw</Card.Subtitle>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                For more details please contact the officer in-charge in your respective barangays.
                             </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                     </Card>
                 </div>
@@ -41,11 +35,8 @@ export default function Programs() {
                             <Card.Title>IP MONTH CELEBRATION</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Contest</Card.Subtitle>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                For more details please contact the officer in-charge in your respective barangays.
                             </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                     </Card>
                 </div>

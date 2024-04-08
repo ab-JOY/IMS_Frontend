@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch} from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Home() {
 
@@ -19,9 +22,15 @@ export default function Home() {
     };
 
     const deleteMember = async (id) => {
-        await axios.delete(`http://localhost:8080/member/${id}`)
-        loadMembers()
-    }
+        const confirmation = window.confirm("Are you sure you want to delete this record permanently?");
+        if (confirmation) {
+            await axios.delete(`http://localhost:8080/member/${id}`);
+            loadMembers();
+        } else {
+
+        }
+    };
+    
 
     return (
         <div className="container">

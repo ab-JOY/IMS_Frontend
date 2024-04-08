@@ -14,6 +14,7 @@ export default function NavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/programs">Programs</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/officers">Officer Directory</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
