@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OfficersDirectory() {
   return (
-    <div className="container">
+    <div className="container" id="officers">
       <div class="content">
 
         <figure class="org-chart cf">

@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 export default function Programs() {
     return (
-        <div className="container align-items-md-center">
+        <div className="container align-items-md-center" id="programs">
             <div className="row mb-3">
                 <div className="col-xl-3 col-sm-6 py-5">
                     <Card style={{ width: '14rem' }}>

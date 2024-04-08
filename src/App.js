@@ -23,9 +23,12 @@ function App() {
     <div className="App">
       <Router>
       <NavBar/>
+      <Main/>
+      <AboutUs/>
+      <Programs/>
+      <OfficersDirectory/>
 
-      <Routes>
-        <Route exact path="/" element={<Main/>}/>
+      <Routes>    
         <Route exact path ="/admin" element={<AdminDashboard/>}/>
         <Route exact path="/home" element={<Home/>}/>
         <Route exact path="/addmember" element={<AddMember/>}/>
@@ -35,9 +38,6 @@ function App() {
         <Route exact path="/register" element={<AddMemberTemp/>}/>
         <Route exact path="/pending" element={<MemberTemp/>}/>
         <Route exact path="/newadmin" element={<Report/>}/>
-        <Route exact path="/about" element={<AboutUs/>}/>
-        <Route exact path="/programs" element={<Programs/>}/>
-        <Route exact path="/officers" element={<OfficersDirectory/>}/>
         <Route exact path="/login" element={<Login/>}/>
        
       </Routes>

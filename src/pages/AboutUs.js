@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutUs() {
     return (
-        <div className="body">
+        <div className="body" id="about">
             <section>
                 <div className="centered h-screen">
                     <div>
